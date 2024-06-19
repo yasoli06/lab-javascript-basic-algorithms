@@ -40,4 +40,25 @@ if (hacker1 > hacker2) {
 
 //Bonus 1: 
 
+const longText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec ultrices orci. Vestibulum rutrum metus non egestas faucibus. Fusce ornare elit id fermentum dictum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras tincidunt in lectus nec dapibus. Proin in mauris ut urna pellentesque viverra nec vel justo. In mollis nisi eu fermentum iaculis.
 
+Cras sed mauris lobortis metus vulputate feugiat aliquet et ligula. Ut dapibus est id tortor commodo, auctor fermentum sem gravida. Integer efficitur sapien a turpis dignissim, sit amet vehicula enim facilisis. Praesent nisl odio, maximus ut libero tincidunt, molestie gravida erat. Duis dignissim ante sed leo cursus blandit. Curabitur congue mattis dolor in volutpat. Maecenas suscipit vulputate urna, vel tristique nunc viverra mollis. Integer venenatis lectus lectus, nec eleifend odio facilisis at. Suspendisse commodo vel est a porta. Aliquam erat volutpat.
+
+Praesent a rhoncus enim, gravida tincidunt urna. Mauris nec elementum est. Cras in risus ac dui rutrum hendrerit vitae et nibh. Quisque rhoncus tincidunt mi nec tempor. Pellentesque ullamcorper ex magna, in mattis diam bibendum eget. Nunc nec est venenatis, varius tellus rutrum, luctus tellus. Sed at fringilla diam. Donec ornare suscipit augue vel maximus. Suspendisse a tortor tempor, semper metus ut, maximus diam. Donec pellentesque congue nisi, a blandit urna fringilla sed. Maecenas ut sem porta, aliquet elit accumsan, ultricies mauris. In laoreet magna diam, quis faucibus ante dictum ut. Proin ac pretium elit. Suspendisse rutrum, tortor id cursus semper, velit dui cursus magna, sed rhoncus velit felis pretium massa. Mauris pretium et libero et elementum.`
+
+function WordCount(str) { 
+    return str.split(" ").length;
+  }
+  console.log(WordCount(longText));
+
+
+function wordCount(str) {
+    let numberOfWords = str.split(" ");
+    let wordTotal = numberOfWords,length;
+    let etCount = 0
+    for (let i = 0; i < wordTotal.length; i++)
+      if (numberOfWords[i] === "et") { 
+        etCount = +1;
+    }  
+    console.log(wordCount(`Número de veces que aparece "et": ${etCount}`));
+}
