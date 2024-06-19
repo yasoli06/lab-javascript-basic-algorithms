@@ -46,19 +46,15 @@ Cras sed mauris lobortis metus vulputate feugiat aliquet et ligula. Ut dapibus e
 
 Praesent a rhoncus enim, gravida tincidunt urna. Mauris nec elementum est. Cras in risus ac dui rutrum hendrerit vitae et nibh. Quisque rhoncus tincidunt mi nec tempor. Pellentesque ullamcorper ex magna, in mattis diam bibendum eget. Nunc nec est venenatis, varius tellus rutrum, luctus tellus. Sed at fringilla diam. Donec ornare suscipit augue vel maximus. Suspendisse a tortor tempor, semper metus ut, maximus diam. Donec pellentesque congue nisi, a blandit urna fringilla sed. Maecenas ut sem porta, aliquet elit accumsan, ultricies mauris. In laoreet magna diam, quis faucibus ante dictum ut. Proin ac pretium elit. Suspendisse rutrum, tortor id cursus semper, velit dui cursus magna, sed rhoncus velit felis pretium massa. Mauris pretium et libero et elementum.`
 
-function WordCount(str) { 
-    return str.split(" ").length;
+let numOfWords = longText.split(" ");
+
+console.log(numOfWords.length);
+
+let etCount = 0;
+
+  for (i = 0; i < longText.length; i++) {
+    if ((longText[i] === "e") && (longText[i + 1] === "t") && (longText[i - 1] === " ") && longText[i + 2] === " ") {
+        etCount++;
+    }
   }
-  console.log(WordCount(longText));
-
-
-function wordCount(str) {
-    let numberOfWords = str.split(" ");
-    let wordTotal = numberOfWords,length;
-    let etCount = 0
-    for (let i = 0; i < wordTotal.length; i++)
-      if (numberOfWords[i] === "et") { 
-        etCount = +1;
-    }  
-    console.log(wordCount(`Número de veces que aparece "et": ${etCount}`));
-}
+  console.log(etCount);
